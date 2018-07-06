@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "express": "^4.16.3",
+    "web-push": "^3.3.2"
+  },
+  "scripts": {
+    "keygen": "node generateKeys.js > keys.json",
+    "dev": "node index.js"
+  },
+  "name": "webpush-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:momentspace/webpush-app.git",
+  "author": "momentspace <momentspace@gmail.com>",
+  "license": "MIT"
+}
