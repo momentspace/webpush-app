@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 var fs = require('fs')
 var https = require('https')
 var options = {
-  pfx: fs.readFileSync('./mysslserver.pfx')
+  pfx: fs.readFileSync('./ssl_key/mysslserver.pfx')
 }
 var server = https.createServer(options, app)
 
