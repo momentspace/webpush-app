@@ -68,7 +68,7 @@ app.post('/push', (req, res) => {
 })
 
 
-var server = app.listen(8080, function(){
+server.listen(8080, function(){
   console.log("Node.js is listening to PORT:" + server.address().port);
 });
 
