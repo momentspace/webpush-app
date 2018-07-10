@@ -16,7 +16,7 @@ var subscription = null
 function sendNotification(payload) {
   const options = {
     // gcmAPIKey: '< GCM API Key >',
-    vapidDetails: Object.assign({}, vapidKeys, {subject: 'mailto: ' + process.env.EMAIL})
+    vapidDetails: Object.assign({}, vapidKeys, {subject: 'mailto: ' + process.env.EXPRESS_EMAIL})
     // TTL: 100
     // headers: {
     //   '< header name >': '< header value >'
