@@ -4,6 +4,13 @@ const webpush = require('web-push');
 const vapidKeys = require('./keys.json')
 const bodyParser = require('body-parser');
 
+var fs = require('fs')
+var https = require('https')
+var options = {
+  pfx: fs.readFileSync('./mysslserver.pfx')
+}
+var server = https.createServer(options, app)
+
 var subscription = null
 
 function sendNotification(payload) {
