@@ -40,18 +40,21 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 app.get('/key', (req, res) => {
+  console.log('public key取得')
   return res.json({
     publicKey: vapidKeys.publicKey
   })
 })
 
 app.post('/sub', (req, res) => {
+  console.log('Subscription登録')
   console.log(req.body)
   subscription = req.body
   return subscription
 })
 
 app.post('/push', (req, res) => {
+  console.log('PUSH通知登録')
   console.log(req.body)
   sendNotification(req.body.text)
   return req.body
